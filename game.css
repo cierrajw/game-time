@@ -1,5 +1,11 @@
+body{
+  background-color: black;
+}
+
 #game {
-  border: 1px dashed;
+  border: 1px dashed white;
   margin: auto;
   display: block;
+  background-color: blue;
+  margin-top: 5rem;
 }
