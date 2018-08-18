@@ -14,6 +14,19 @@ describe('Player', () => {
 
 
   it('if player collides with wall, decrease score', () => {
+    player = new Player(this.x, this.y, this.height, this.width, this.color, this.borderColor, this.lives);
+
+
+    assert.equal(player.isCollidingWithWall, true);
+
+    for(i = 0; player.players; i--){
+
+      
+
+
+    }
+
+    assertequal(player.lives, player.lives - 1);
 
 
   });

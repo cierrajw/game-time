@@ -1,11 +1,15 @@
 body{
-  background-color: black;
+/*  background-color: black;
+*/background-image: url('/Users/Cierra/Documents/TP/game-time/images/tronimg1.png') !important; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100;
 }
 
 #game {
   border: 1px dashed white;
   margin: auto;
   display: block;
-  background-color: blue;
+  background-color: black;
   margin-top: 5rem;
 }
