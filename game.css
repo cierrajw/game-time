@@ -1,6 +1,6 @@
 body{
 /*  background-color: black;
-*/background-image: url('/Users/Cierra/Documents/TP/game-time/images/tronimg1.png') !important; 
+*/background-image: url('https://pre00.deviantart.net/da7f/th/pre/i/2013/012/e/b/another_tron_type_floor_by_taz09-d5rbmoq.png') !important; 
   background-size: cover;
   background-repeat: no-repeat;
   height: 100;
@@ -12,4 +12,17 @@ body{
   display: block;
   background-color: black;
   margin-top: 5rem;
+}
+
+#tron-button{
+  background-color: red;
+  color: yellow;
+  height: 50px;
+  width: 100px;
+}
+
+.button-section{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }

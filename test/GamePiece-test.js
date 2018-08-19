@@ -25,7 +25,11 @@ describe('GamePiece', () => {
   });
 
   it('should be able to move/change direction', () => {
+    var event = {
+      keyCode:
+    }
 
+    
 
   });
 
