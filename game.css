@@ -65,7 +65,12 @@ body{
   margin-top: 0;
   height: 50px;
 }
-
+.lives-text{
+  color: red;
+}
+.score-text{
+  color: yellow;
+}
 @media(min-width: 1269px){
 
   .player-lives{
