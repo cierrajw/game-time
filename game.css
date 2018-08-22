@@ -4,6 +4,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 #tron-title{
   font-family: 'Orbitron', sans-serif;
   color: white;
@@ -11,13 +12,13 @@ body{
   display: flex;
   justify-content: center;
 }
+
 .player-lives{
   display: flex;
   color: white;
   justify-content: space-between;
   width: 740px;
-/*  bottom: 70px;
-*/  position: relative;
+  position: relative;
   left: 17rem;
   top: 11rem;
 }
@@ -40,8 +41,6 @@ body{
   margin-bottom: 200px;
   background-image: url('https://s15.postimg.cc/5buc4geej/composite-grid.jpg');
   background-size: cover;
-/*  position: relative;
-  bottom: 200px;*/
 }
 
 .tally-div{
@@ -59,18 +58,22 @@ body{
   bottom: 90px;
   font-size: 1.5rem;
 }
+
 .button-section{
   display: flex;
   justify-content: center;
   margin-top: 0;
   height: 50px;
 }
+
 .lives-text{
   color: red;
 }
+
 .score-text{
   color: yellow;
 }
+
 @media(min-width: 1269px){
 
   .player-lives{
@@ -78,10 +81,9 @@ body{
     color: white;
     justify-content: space-between;
     width: 740px;
-  /*  bottom: 70px;
-  */  position: relative;
+    position: relative;
     left: 29rem;
     top: 11rem;
-}
+  }
 
 }
