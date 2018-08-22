@@ -15,12 +15,20 @@ body{
   display: flex;
   color: white;
   justify-content: space-between;
-  width: 720px;
-  position: relative;
-  bottom: 70px;
-  position: relative;
-  left: 28%;
-  top: 140px;
+  width: 740px;
+/*  bottom: 70px;
+*/  position: relative;
+  left: 17rem;
+  top: 11rem;
+}
+
+#player1-lives, #player2-lives{
+  margin-bottom: 2px;
+  margin-left: 5px;
+}
+
+.scores{
+  margin-top: 1px;
 }
 
 #game {
@@ -35,6 +43,12 @@ body{
 /*  position: relative;
   bottom: 200px;*/
 }
+
+.tally-div{
+  display: flex;
+  flex-direction: column;
+}
+
 #tron-button{
   background-color: red;
   color: yellow;
@@ -50,4 +64,19 @@ body{
   justify-content: center;
   margin-top: 0;
   height: 50px;
+}
+
+@media(min-width: 1269px){
+
+  .player-lives{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    width: 740px;
+  /*  bottom: 70px;
+  */  position: relative;
+    left: 29rem;
+    top: 11rem;
+}
+
 }
