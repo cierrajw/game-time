@@ -17,10 +17,6 @@ body{
   display: flex;
   color: white;
   justify-content: space-between;
-/*  width: 740px;
-  position: relative;
-  left: 17rem;
-  top: 11rem;*/
 }
 
 #player1-lives, #player2-lives{
@@ -28,8 +24,10 @@ body{
   margin-left: 5px;
 }
 
-.score-secton{
+.score-section{
   display: flex;
+  width: 65px;
+  justify-content: space-between;
 }
 
 .scores{
@@ -79,9 +77,9 @@ body{
 .score-text{
   color: yellow;
 }
-/*
-@media(min-width: 1269px){
 
+@media(min-width: 1269px){
+/*
   .player-lives{
     display: flex;
     color: white;
