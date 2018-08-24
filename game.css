@@ -17,15 +17,19 @@ body{
   display: flex;
   color: white;
   justify-content: space-between;
-  width: 740px;
+/*  width: 740px;
   position: relative;
   left: 17rem;
-  top: 11rem;
+  top: 11rem;*/
 }
 
 #player1-lives, #player2-lives{
   margin-bottom: 2px;
   margin-left: 5px;
+}
+
+.score-secton{
+  display: flex;
 }
 
 .scores{
@@ -46,6 +50,8 @@ body{
 .tally-div{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
 }
 
 #tron-button{
@@ -73,7 +79,7 @@ body{
 .score-text{
   color: yellow;
 }
-
+/*
 @media(min-width: 1269px){
 
   .player-lives{
@@ -84,6 +90,6 @@ body{
     position: relative;
     left: 29rem;
     top: 11rem;
-  }
+  }*/
 
 }
