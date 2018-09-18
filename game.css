@@ -1,6 +1,6 @@
 body{
   background-color: black;
-  background-image: url('https://pre00.deviantart.net/da7f/th/pre/i/2013/012/e/b/another_tron_type_floor_by_taz09-d5rbmoq.png') !important; 
+  background-image: url('https://pre00.deviantart.net/da7f/th/pre/i/2013/012/e/b/another_tron_type_floor_by_taz09-d5rbmoq.png') !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -8,15 +8,34 @@ body{
 #tron-title{
   font-family: 'Orbitron', sans-serif;
   color: white;
-  font-size: 5rem;
+  font-size: 7rem;
   display: flex;
   justify-content: center;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.game-instructions{
+  color: white;
+  width: 500px;
+  height: 200px;
+  background-color: black;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.instructions-title{
+  font-size: 3rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .player-lives{
   display: flex;
   color: white;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 1300px;
+  margin: 100px auto 5px auto;
 }
 
 #player1-lives, #player2-lives{
