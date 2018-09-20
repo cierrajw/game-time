@@ -8,90 +8,55 @@ describe('GamePiece', () => {
   let ctx = game.ctx;
 
   beforeEach(() => {
-    gamepiece = new GamePiece(30, 30, 10, 10, 'green')
+    gamepiece = new GamePiece(1, 300, 5, 5, 'red', 'black', 1, 0, 3);
   });
 
   it('should take properties', () => {
-    // Assertion
     assert.deepEqual(gamepiece, {
-      x: 30,
-      y: 30,
-      height: 10,
-      width: 10,
-      color: 'green',
+      x: 1,
+      y: 300,
+      borderColor: 'black',
+      height: 5,
+      width: 5,
+      color: 'red',
       dx: 1,
       dy: 0,
-      dxv: 1,
-      dyv: 1
+      dxv: 2,
+      dyv: 1,
+      player1win: true,
+      player2win: true
     });
-    // Teardown
   });
 
-  it('should be able to move/change direction', () => {
-    let gamepiece = new GamePiece(30, 30, 10, 10, 'green');
+  it('should be able to move direction', () => {
+    let gamepiece = new GamePiece(1, 300, 5, 5, 'red', 'black', 1, 0, 3);
 
-    gamepiece.move();
+    gamepiece.move({dx: 1, dy: 1});
 
-    assert.deepEqual(gamepiece.move(), {gamepiece.x += gamepiece.dx * gamepiece.dxv;
-    gamepiece.y += gamepiece.dy * gamepiece.dyv;})
-
-
+    assert.equal(gamepiece.dx, 1);
   });
 
-  it('should be able to collide with wall', () => {
-    let gamepiece = new GamePiece(30, 30, 10, 10, 'green');
+  it('should be able to change direction', () => {
+   let gamepiece = new GamePiece(1, 300, 5, 5, 'red', 'black', 1, 0, 3);
 
-    let game = new Game(ctx);
+   gamepiece.move({dx: 0, dy: 0});
+   gamepiece.changeDirection({dx: 0, dy: 1});
 
-    let player1Colliding = game.players[0].isCollidingWithWall();
-    let player2Colliding = game.players[1].isCollidingWithWall();
+   assert.equal(gamepiece.dy, 1);
+  });
 
-    game.move();
+  it('should not be able to collide with wall', () => {
+    let gamepiece = new GamePiece (800, 700, 5, 5, 'red', 'black', 1, 0, 3);
 
-    assert.equal(player1Colliding, true);
-
-    assert.equal(player2Colliding, true);
-    
+    let isCollidingWithWall = gamepiece.isCollidingWithWall(800, 700);
+    assert.isTrue(isCollidingWithWall);
   });
 
   it('should be able to collide with another gamepiece', () => {
-    let gamepiece = new GamePiece(30, 30, 10, 10, 'green');
-    
+    let gamepiece1 = new GamePiece (1, 300, 5, 5, 'red', 'black', 1, 0, 3);
 
+    let isCollidingWith = gamepiece.isCollidingWith(gamepiece);
+
+    assert.isTrue(isCollidingWith);
   });
-
-  it('if gamepiece collides with wall, player number of lives should decrease by 1', () => {
-
-    const player = new Player();
-
-    const colliding = gamepiece.isCollidingWithWall(this.canvasWidth, this.canvasHeight);
-
-    gamepiece.move();
-
-    assert.isTrue(colliding);
-
-    assert.equal(player.lives, player.lives - 1);
-
-    
-  });
-
-  it('if gamepiece collides with player 2', () => {
-
-    const gamepiece2 = new GamePiece(150, 130, 10, 10, 'green');
-
-    const player = new Player();
-
-    const colliding = gamepiece.isCollidingWith(gamepiece2);
-
-    gamepiece.move();
-
-    assert.isTrue(colliding);
-
-    assert.equal(player.lives, player.lives - 1);
-
-    // Assertion
-    assert.isFalse(colliding);
-  });
-
-
 });

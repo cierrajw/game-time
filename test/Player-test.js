@@ -10,14 +10,20 @@ describe('Player', function() {
   beforeEach(() => {
     player = new Player(1, 300, 5, 5, 'red', 'black', 1, 0, 3)
   });
-  
+
   class Context {
     constructor() {
       this.canvas = 'canvas#game';
       this.fillStyle = '#000000';
-    
+
     }
   }
+
+  it('should instansitate a new player', () => {
+    let player = new Player(1, 300, 5, 5, 'red', 'black', 1, 0, 3);
+
+    assert.isObject(player)
+  });
 
   it.skip('should take properties', () => {
     assert.deepEqual(player, {
