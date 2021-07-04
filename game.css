@@ -24,6 +24,10 @@ body{
   text-align: center;
 }
 
+h3{
+  font-size: 1.7rem;
+}
+
 .instructions-title{
   font-size: 3rem;
   margin: 0 auto;
